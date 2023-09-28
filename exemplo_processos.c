@@ -28,7 +28,7 @@ int main()
 
 	// Processo pai
 	else {
-		// Pai esperarra ate que o processo filho termine
+		// Pai esperara ate que o processo filho termine
 		wait(NULL);
 		printf("\nOla! Sou o processo pai!");
 		printf("\nCriei um processo filho de numero %d. Ele jah encerrou!", pid);
