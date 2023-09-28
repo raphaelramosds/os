@@ -11,7 +11,7 @@ int buffer[N][TAMANHO];
 /**
  * @details Thread que recebe uma linha da matriz buffer com dimensao
  * (N,TAMANHO), e coloca na ultima coluna o resultado da soma das
- * entradas de 0 ate TAMANHOA-1
+ * entradas de 0 ate TAMANHO-1
 */
 void *soma_linha(void *ptr) {
     int indice = 0;
