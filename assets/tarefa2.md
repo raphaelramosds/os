@@ -5,7 +5,7 @@
 
 ## Descrição da biblioteca de threads utilizada
 
-A linguagem C foi utilizada para o desenvolvimento do trabalho. Utilizou-se funções da biblioteca pthread para direcionar a lógica do programa multithread responsável por fazer a segmentação da imagem de interesse. Essas funções foram: `pthread_create` (responsável pela instanciação das threads) e `pthread_join` (responsável pela sincronização das threads). Além disso, a diretiva `pthread_t` foi utilizada para declarar as threads.
+A linguagem C foi utilizada para o desenvolvimento do trabalho. Utilizou-se funções da biblioteca pthread para direcionar a lógica do programa multithread responsável por fazer a segmentação da imagem de interesse. Essas funções foram: `pthread_create` (responsável por instanciar das threads) e `pthread_join` (responsável pela sincronização das threads). Além disso, a diretiva `pthread_t` foi utilizada para declarar as threads.
 
 ## Explicação do programa
 
@@ -47,7 +47,7 @@ int main() {
 }
 ```
 
-A matriz de interesse e a matriz com os seus contornos segmentados são alocadas dinamicamente nos ponteiros `pixels` e `g`, respectivamente. A função `read_image` é responsável por fazer a leitura da imagem de interesse, em PGM, e criar uma matriz com todos os seus pixels, além de armazenar nas variáveis `width` e `height` a largura e altura da imagem. A seguir está sua implementação
+A matriz de interesse e a matriz com os seus contornos segmentados são alocadas dinamicamente nos ponteiros `pixels` e `g`, respectivamente. A função `read_image` é responsável por fazer a leitura da imagem de interesse, em PGM, e criar uma matriz com todos os seus pixels, além de armazenar nas variáveis `width`, `height` e `max_value` a largura, altura da imagem e maior valor possível de um pixel. A seguir está sua implementação
 
 ```c
 /**
@@ -228,7 +228,10 @@ void* generate_gy(void* args) {
 }
 ```
 
-A declaração desse struct foi necessária pois as variáveis manipuladas pelas threads não são globais: elas são declaradas dentro da função principal `main` e na rotina `process_image`. Então, julguei mais conveniente passar os endereços de memória dessas variáveis para as threads filhas, as quais estão presentes em `TParams`.
+
+A declaração desse struct foi necessária pois as variáveis manipuladas pelas threads não são globais: elas são declaradas dentro da função principal `main` e na rotina `process_image`. Então, julguei mais conveniente passar os endereços de memória dessas variáveis para as threads filhas, as quais estão presentes em `TParams`. 
+
+Note ainda que as threads filhas modificam as máscaras `gx` e `gy` criadas pela thread mãe: `generate_gx` modifica apenas `gx`, e `generaet_gy` modifica apenas `gy`.
 
 O passo final foi exportar a imagem segmentada, em PMG, com o método `export_image`. Abaixo está sua implementação
 
@@ -276,4 +279,5 @@ No geral, o desenvolvimento do programa teve uma dificuldade média. A complexid
 
 - FILE. Disponível em https://en.cppreference.com/w/c/io/FILE
 - POSIX Threads Programming Language. Disponível em https://hpc-tutorials.llnl.gov/posix/
+ -Visualizador de Imagens PGM. Disponível em https://www.francogarcia.com/pt-br/ferramentas/visualizador-pgm/
 
