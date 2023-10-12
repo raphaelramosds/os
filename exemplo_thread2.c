@@ -6,7 +6,7 @@ int sum;
 
 /**
  * @details Thread para somar todos os valores que atecedem param
- * Por exemplo, param = 5 implica em sum = 1 + 2 + 3 + 4+ 5
+ * Por exemplo, param = 5 implica em sum = 1 + 2 + 3 + 4 + 5
 */
 void *runner(void *param) {
     int i;

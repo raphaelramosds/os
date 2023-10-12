@@ -9,7 +9,7 @@
 /**
  * @details A thread eh uma funcao que tem sua propria stack e registradores (PC e IR)
  * Sua estrutura eh uma funcao que retorna um ponteiro para void e recebe um ponteiro 
- * para void. Note que na linha 19 fazemos um casting para (int) desse ponteiro, pois
+ * para void. Note que na linha 18 fazemos um casting para (int) desse ponteiro, pois
  * ele representa o tipo de dado que vamos trabalhar. No exemplo_thread2.c, veja que
  * esse tipo de dado é até qual valor inteiro precisamos somar seus valores antecessores
 */

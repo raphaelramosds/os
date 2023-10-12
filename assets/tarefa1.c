@@ -3,7 +3,7 @@
  * 
  * Aluno: Raphael Ramos da Silva
  * Matricula: 20200081884
-*/
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
