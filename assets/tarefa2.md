@@ -279,5 +279,5 @@ No geral, o desenvolvimento do programa teve uma dificuldade média. A complexid
 
 - FILE. Disponível em https://en.cppreference.com/w/c/io/FILE
 - POSIX Threads Programming Language. Disponível em https://hpc-tutorials.llnl.gov/posix/
- -Visualizador de Imagens PGM. Disponível em https://www.francogarcia.com/pt-br/ferramentas/visualizador-pgm/
+- Visualizador de Imagens PGM. Disponível em https://www.francogarcia.com/pt-br/ferramentas/visualizador-pgm/
 
