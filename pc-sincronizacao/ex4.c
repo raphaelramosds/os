@@ -14,11 +14,15 @@ void enter_region(int process)
 	bool v;
 	do {
 		v = 0;
+	// Thread stays here while it does not have the lock
+	// If lock == v = 0, it means that another thread dropped the lock
 	} while (!atomic_compare_exchange_strong(&lock, &v, 1));
+	// Thread achieves the lock (lock = 1)
 }
 
 void leave_region(int process)
 {
+	// Thread drops the lock (lock = 0)
 	atomic_store(&lock, 0);
 }
 
