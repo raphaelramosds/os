@@ -1,12 +1,9 @@
-## uml: sequence diagram
-Here I will embed PlantUML markup to generate a sequence diagram.
-
-I can include as many plantuml segments as I want in my Markdown, and the diagrams can be of any type supported by PlantUML.
+# Operating Systems
 
 ```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+graph LR
+    subgraph Boneco
+        boneco((<img src="./sticker.svg" width="100" height="100">))
+    end
+
 ```
