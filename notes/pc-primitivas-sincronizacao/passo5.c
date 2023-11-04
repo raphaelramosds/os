@@ -1,9 +1,9 @@
 // =================================================================
 // Variável de condição
 // =================================================================
-// Essa variável ermite que uma thread suspenda sua execução até que 
-// (durma) até que uma determinada condição seja atendida por outra 
-// thread. Essa outra thread "sinaliza" o cumprimento dessa condição
+// Permite que uma thread suspenda sua execução (durma) até que uma
+// determinada condição seja atendida por outra thread. Essa outra
+// thread sinaliza o cumprimento dessa condição emitindo um sinal
 // =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>
