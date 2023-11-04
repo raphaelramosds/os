@@ -5,8 +5,8 @@
 // Permite n threads ao mesmo tempo na seção crítica
 //
 // Primitivas:
-//	wait: 	decrementa contador (dormir se for zero)
-//	post: 	incrementa contador
+//	wait: decrementa contador (dormir se for zero)
+//	post: incrementa contador
 //
 // Note: wait equivale ao lock do mutex, e post ao unlock
 // =================================================================

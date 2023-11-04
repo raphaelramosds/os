@@ -6,8 +6,8 @@
 // o cumprimento dessa condição emitindo um sinal
 //
 // Primitivas:
-// 	wait	: liberar a trava e colocar para dormir
-//	signal	: emitir o sinal (acordar threads)
+// 	wait: 	liberar a trava e colocar para dormir
+//	signal: emitir o sinal (acordar threads)
 // =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>
