@@ -6,9 +6,9 @@
 //
 // Primitivas:
 //	wait: 	decrementa contador (dormir se for zero)
-//			(similar ao lock do mutex)
 //	post: 	incrementa contador
-//			(similar ao unlock do mutex)
+//
+// Note: wait equivale ao lock do mutex, e post ao unlock
 // =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>
