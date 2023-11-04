@@ -8,7 +8,9 @@
 //	wait: decrementa contador (dormir se for zero)
 //	post: incrementa contador
 //
-// Note: wait equivale ao lock do mutex, e post ao unlock
+// Note: 
+//	- Quando contador é zero, wait equivale ao lock do mutex
+//	- Se uma thread consegue dar post, ela entra na seção crítica
 // =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>
