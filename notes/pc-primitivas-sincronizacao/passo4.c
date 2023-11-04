@@ -43,7 +43,7 @@ void *consumidor(void *arg)
 	for (;;) {
 		pthread_mutex_lock(&mutex);
 		while (inserir == remover) {
-			// Buffer cheio, abra a trava para o produtor
+			// Buffer vazio, abra a trava para o produtor
 			pthread_mutex_unlock(&mutex);
 			pthread_mutex_lock(&mutex);
 		}

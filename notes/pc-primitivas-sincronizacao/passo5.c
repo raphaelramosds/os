@@ -1,3 +1,10 @@
+// =================================================================
+// Variável de condição
+// =================================================================
+// Essa variável ermite que uma thread suspenda sua execução até que 
+// (durma) até que uma determinada condição seja atendida por outra 
+// thread. Essa outra thread "sinaliza" o cumprimento dessa condição
+// =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,6 +38,8 @@ void *produtor(void *arg)
 			dados[inserir] = v;
 			inserir = (inserir + 1) % TAMANHO;
 			pthread_mutex_unlock(&mutex);
+			// Acorde as threads consumidoras
+			// Sinaliza aos consumidores a inserção de um novo elemento
 			pthread_cond_signal(&cond);
 		}
 		usleep(50000);
@@ -39,11 +48,24 @@ void *produtor(void *arg)
 	return NULL;
 }
 
+// ==================================================================
+// Otimização
+// ==================================================================
+// O consumo da CPU dessa implementação é menor: as threads não ficam 
+// em um loop esperando a trava, elas dormem
+// ==================================================================
 void *consumidor(void *arg)
 {
 	for (;;) {
 		pthread_mutex_lock(&mutex);
+		// ==================================================================
+		// Dúvida
+		// ==================================================================
+		// Por que ainda usamos o loop então?
+		// ==================================================================
 		while (inserir == remover) {
+			// Dorme e libera a trava
+			// Durma até receber o sinal de inserção
 			pthread_cond_wait(&cond, &mutex);
 		}
 		printf("%zu: Consumindo %d\n", (size_t)arg, dados[remover]);

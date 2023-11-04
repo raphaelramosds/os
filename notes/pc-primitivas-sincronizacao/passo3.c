@@ -1,3 +1,9 @@
+// =================================================================
+// Considerações
+// =================================================================
+// Os consumidores são executados primeiro que o produtor
+// inserir fica atrasado em relação ao remover
+// =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
