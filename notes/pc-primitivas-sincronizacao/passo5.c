@@ -2,8 +2,12 @@
 // Variável de condição
 // =================================================================
 // Permite que uma thread suspenda sua execução (durma) até que uma
-// determinada condição seja atendida por outra thread. Essa outra
-// thread sinaliza o cumprimento dessa condição emitindo um sinal
+// determinada condição seja atendida por outra thread, que sinaliza 
+// o cumprimento dessa condição emitindo um sinal
+//
+// Primitivas:
+// 	wait	: liberar a trava e colocar para dormir
+//	signal	: emitir o sinal (acordar threads)
 // =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>

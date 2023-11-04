@@ -1,3 +1,15 @@
+// =================================================================
+// Semáforo
+// =================================================================
+// Primitiva de sincronização similar ao mutex
+// Permite n threads ao mesmo tempo na seção crítica
+//
+// Primitivas:
+//	wait: 	decrementa contador (dormir se for zero)
+//			(similar ao lock do mutex)
+//	post: 	incrementa contador
+//			(similar ao unlock do mutex)
+// =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
