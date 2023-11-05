@@ -5,12 +5,8 @@
 // Permite n threads ao mesmo tempo na seção crítica
 //
 // Primitivas:
-//	wait: decrementa contador (dormir se for zero)
-//	post: incrementa contador
-//
-// Note: 
-//	- Quando contador é zero, wait equivale ao lock do mutex
-//	- Se uma thread consegue dar post, ela entra na seção crítica
+//	wait: decrementa (põe a thread para dormir se for zero)
+//	post: incrementa e acorda alguma thread que estava dormindo
 // =================================================================
 #define _GNU_SOURCE
 #include <stdio.h>
