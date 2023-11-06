@@ -42,8 +42,7 @@ void *produtor(void *arg)
 			dados[inserir] = v;
 			inserir = (inserir + 1) % TAMANHO;
 			pthread_mutex_unlock(&mutex);
-			// Acorde as threads consumidoras
-			// Sinaliza aos consumidores a inserção de um novo elemento
+			// Acorda as threads consumidoras sinalizando a inserção de um novo elemento
 			pthread_cond_signal(&cond);
 		}
 		usleep(50000);
@@ -63,8 +62,7 @@ void *consumidor(void *arg)
 	for (;;) {
 		pthread_mutex_lock(&mutex);
 		while (inserir == remover) {
-			// Dorme e libera a trava
-			// Durma até receber o sinal de inserção
+			// Dorme até receber o sinal de inserção e libera a trava
 			pthread_cond_wait(&cond, &mutex);
 		}
 		printf("%zu: Consumindo %d\n", (size_t)arg, dados[remover]);
