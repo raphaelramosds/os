@@ -56,17 +56,12 @@ void *produtor(void *arg)
 // Otimização
 // ==================================================================
 // O consumo da CPU dessa implementação é menor: as threads não ficam 
-// em um loop esperando a trava, elas dormem
+// em um loop consumindo CPU, elas param sua execução (dormem)
 // ==================================================================
 void *consumidor(void *arg)
 {
 	for (;;) {
 		pthread_mutex_lock(&mutex);
-		// ==================================================================
-		// Dúvida
-		// ==================================================================
-		// Por que ainda usamos o loop então?
-		// ==================================================================
 		while (inserir == remover) {
 			// Dorme e libera a trava
 			// Durma até receber o sinal de inserção
