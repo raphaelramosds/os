@@ -82,7 +82,7 @@ void condvar_wait(struct condvar *c, sem_t *mutex) {
 }
 ```
 
-A funçã que acorda todas as *threads* em espera pela condição ser satisfeita possui assinatura `condvar_broadcast(struct condvar* c)`. Ela verifica se há threads em espera (c->waiting_threads > 0) e, se houver, emite sinais para acordar todas elas em um loop com sem_post(&c->semaphore). Isso está em conformidade com o comportamento de broadcast em uma variável de condição.
+A função que acorda todas as *threads* em espera pela condição ser satisfeita possui assinatura `condvar_broadcast(struct condvar* c)`. Ela verifica se há threads em espera (c->waiting_threads > 0) e, se houver, emite sinais para acordar todas elas em um loop com sem_post(&c->semaphore). Isso está em conformidade com o comportamento de broadcast em uma variável de condição.
 
 ```c
 void condvar_broadcast(struct condvar *c) {
