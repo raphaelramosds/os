@@ -98,3 +98,261 @@ Produzindo 1329202900
 1: Consumindo 1329202900
 Produzindo 1887658390
 2: Consumindo 1887658390
+Produzindo 672655340
+1: Consumindo 672655340
+Produzindo 1941690360
+2: Consumindo 1941690360
+Produzindo 1586903190
+1: Consumindo 1586903190
+Produzindo 1061730690
+2: Consumindo 1061730690
+Produzindo 1877565100
+1: Consumindo 1877565100
+Produzindo 358532290
+2: Consumindo 358532290
+Produzindo 1857756970
+1: Consumindo 1857756970
+Produzindo 1426819080
+2: Consumindo 1426819080
+Produzindo 1112720090
+1: Consumindo 1112720090
+Produzindo 241909610
+2: Consumindo 241909610
+Produzindo 1369356620
+1: Consumindo 1369356620
+Produzindo 37487770
+2: Consumindo 37487770
+Produzindo 959372260
+1: Consumindo 959372260
+Produzindo 470591100
+2: Consumindo 470591100
+Produzindo 1635550270
+1: Consumindo 1635550270
+Produzindo 1302539390
+2: Consumindo 1302539390
+Produzindo 738393740
+1: Consumindo 738393740
+Produzindo 1983614030
+2: Consumindo 1983614030
+Produzindo 628974580
+1: Consumindo 628974580
+Produzindo 1931513970
+2: Consumindo 1931513970
+Produzindo 488663950
+1: Consumindo 488663950
+Produzindo 29777560
+2: Consumindo 29777560
+Produzindo 2143124030
+1: Consumindo 2143124030
+Produzindo 1615935710
+2: Consumindo 1615935710
+Produzindo 120306710
+1: Consumindo 120306710
+Produzindo 1255387090
+2: Consumindo 1255387090
+Produzindo 1751378130
+1: Consumindo 1751378130
+Produzindo 746349250
+2: Consumindo 746349250
+Produzindo 577721120
+1: Consumindo 577721120
+Produzindo 1814887560
+2: Consumindo 1814887560
+Produzindo 690367770
+1: Consumindo 690367770
+Produzindo 1910858270
+2: Consumindo 1910858270
+Produzindo 1582152040
+1: Consumindo 1582152040
+Produzindo 51245830
+2: Consumindo 51245830
+Produzindo 628966950
+1: Consumindo 628966950
+Produzindo 1520982030
+2: Consumindo 1520982030
+Produzindo 1862875640
+1: Consumindo 1862875640
+Produzindo 695748720
+2: Consumindo 695748720
+Produzindo 2025554010
+1: Consumindo 2025554010
+Produzindo 857490000
+2: Consumindo 857490000
+Produzindo 1131884850
+1: Consumindo 1131884850
+Produzindo 1992576590
+2: Consumindo 1992576590
+Produzindo 833215350
+1: Consumindo 833215350
+Produzindo 1979015720
+2: Consumindo 1979015720
+Produzindo 580508860
+1: Consumindo 580508860
+Produzindo 1088590930
+2: Consumindo 1088590930
+Produzindo 1671735990
+1: Consumindo 1671735990
+Produzindo 1384095820
+2: Consumindo 1384095820
+Produzindo 1745897490
+1: Consumindo 1745897490
+Produzindo 61101360
+2: Consumindo 61101360
+Produzindo 1889804310
+1: Consumindo 1889804310
+Produzindo 813274570
+2: Consumindo 813274570
+Produzindo 223712350
+1: Consumindo 223712350
+Produzindo 1936060910
+2: Consumindo 1936060910
+Produzindo 1012836610
+1: Consumindo 1012836610
+Produzindo 528433890
+2: Consumindo 528433890
+Produzindo 870305000
+1: Consumindo 870305000
+Produzindo 915711850
+2: Consumindo 915711850
+Produzindo 942724790
+1: Consumindo 942724790
+Produzindo 2078107280
+2: Consumindo 2078107280
+Produzindo 342146590
+1: Consumindo 342146590
+Produzindo 672563970
+2: Consumindo 672563970
+Produzindo 1928189300
+1: Consumindo 1928189300
+Produzindo 1724916170
+2: Consumindo 1724916170
+Produzindo 2067062760
+1: Consumindo 2067062760
+Produzindo 2079611790
+2: Consumindo 2079611790
+Produzindo 18400960
+1: Consumindo 18400960
+Produzindo 625040140
+2: Consumindo 625040140
+Produzindo 14933990
+1: Consumindo 14933990
+Produzindo 1910210050
+2: Consumindo 1910210050
+Produzindo 25084100
+1: Consumindo 25084100
+Produzindo 296596980
+2: Consumindo 296596980
+Produzindo 278450030
+1: Consumindo 278450030
+Produzindo 1139352160
+2: Consumindo 1139352160
+Produzindo 1163384280
+1: Consumindo 1163384280
+Produzindo 505593010
+2: Consumindo 505593010
+Produzindo 895873480
+1: Consumindo 895873480
+Produzindo 995234140
+2: Consumindo 995234140
+Produzindo 962980710
+1: Consumindo 962980710
+Produzindo 984124220
+2: Consumindo 984124220
+Produzindo 1259577690
+1: Consumindo 1259577690
+Produzindo 1403938270
+2: Consumindo 1403938270
+Produzindo 1107096180
+1: Consumindo 1107096180
+Produzindo 93155710
+2: Consumindo 93155710
+Produzindo 1111800030
+1: Consumindo 1111800030
+Produzindo 1698487330
+2: Consumindo 1698487330
+Produzindo 332702450
+1: Consumindo 332702450
+Produzindo 1028363610
+2: Consumindo 1028363610
+Produzindo 1260995960
+1: Consumindo 1260995960
+Produzindo 177332700
+2: Consumindo 177332700
+Produzindo 1777288820
+1: Consumindo 1777288820
+Produzindo 1756098480
+2: Consumindo 1756098480
+Produzindo 1590105340
+1: Consumindo 1590105340
+Produzindo 1564003050
+2: Consumindo 1564003050
+Produzindo 604263370
+1: Consumindo 604263370
+Produzindo 1153263590
+2: Consumindo 1153263590
+Produzindo 1541417540
+1: Consumindo 1541417540
+Produzindo 547407330
+2: Consumindo 547407330
+Produzindo 192048860
+1: Consumindo 192048860
+Produzindo 912194650
+2: Consumindo 912194650
+Produzindo 2025251990
+1: Consumindo 2025251990
+Produzindo 1364180570
+2: Consumindo 1364180570
+Produzindo 1170132540
+1: Consumindo 1170132540
+Produzindo 419914800
+2: Consumindo 419914800
+Produzindo 457676440
+1: Consumindo 457676440
+Produzindo 689442530
+2: Consumindo 689442530
+Produzindo 306851320
+1: Consumindo 306851320
+Produzindo 707184680
+2: Consumindo 707184680
+Produzindo 728149010
+1: Consumindo 728149010
+Produzindo 2033261900
+2: Consumindo 2033261900
+Produzindo 2084546560
+1: Consumindo 2084546560
+Produzindo 2020432100
+2: Consumindo 2020432100
+Produzindo 1953197930
+1: Consumindo 1953197930
+Produzindo 360022300
+2: Consumindo 360022300
+Produzindo 212295100
+1: Consumindo 212295100
+Produzindo 1638253540
+2: Consumindo 1638253540
+Produzindo 263043320
+1: Consumindo 263043320
+Produzindo 1143849810
+2: Consumindo 1143849810
+Produzindo 575705360
+1: Consumindo 575705360
+Produzindo 6938620
+2: Consumindo 6938620
+Produzindo 386753870
+1: Consumindo 386753870
+Produzindo 716898500
+2: Consumindo 716898500
+Produzindo 574682290
+1: Consumindo 574682290
+Produzindo 1851445950
+2: Consumindo 1851445950
+Produzindo 2011662880
+1: Consumindo 2011662880
+Produzindo 1438865740
+2: Consumindo 1438865740
+Produzindo 330546620
+1: Consumindo 330546620
+Produzindo 1353825800
+2: Consumindo 1353825800
+Produzindo 2108785490
+1: Con
