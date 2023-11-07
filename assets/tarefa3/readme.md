@@ -70,12 +70,15 @@ void condvar_signal(struct condvar *c) {
 }
 ```
 
-A função de espera da variável de condição possui assinatura `condvar_wait(struct condvar* c, sem_t* mutex)`. Seu funcionamento consiste em 
+A função que é usada para fazer uma thread esperar até que uma condição específica seja satisfeita possui assinatura `condvar_signal(struct condvar* c, sem_t* mutex)`. 
 
-- Incrementar o semáforo `mutex` para dar oportunidade para outras threads esperarem pela condição ser satisfeita
-- Fazer a thread esperar pelo sinal de controle decrementando `c->semaphore`
+O aumento do valor do semáforo mutex com `sem_post(mutex)` permite que outras threads possam adquirir o mutex, o que é importante para que outras threads tenham a oportunidade de entrar na região crítica.
 
-Uma vez que esse sinal é emitido, essa mesma thread acorda e adquire a trava para garantir a exclusão mútua no acesso à região crítica. 
+Após aumentar o semáforo mutex, a thread atual espera pelo sinal de controle que será emitido quando a condição for satisfeita. Isso é feito com `sem_wait(&c->semaphore)`.
+
+Quando o sinal de controle é emitido (geralmente, isso é feito por outra thread que percebeu que a condição foi satisfeita), a thread atual acorda e adquire o mutex novamente com `sem_wait(mutex)`. Isso é necessário para garantir a exclusão mútua na região crítica, uma vez que a thread pode ter sido interrompida logo antes de entrar na região crítica e liberado o mutex com `sem_post(mutex)`.
+
+A variável `c->waiting_threads` é incrementada antes de liberar o mutex e decrementada após adquirir o mutex novamente.
 
 ```c
 void condvar_wait(struct condvar *c, sem_t *mutex) {
@@ -87,6 +90,17 @@ void condvar_wait(struct condvar *c, sem_t *mutex) {
 }
 ```
 
+A funçã que acorda todas as *threads* em espera pela condição ser satisfeita possui assinatura `condvar_broadcast(struct condvar* c)`. Ela verifica se há threads em espera (c->waiting_threads > 0) e, se houver, emite sinais para acordar todas elas em um loop com sem_post(&c->semaphore). Isso está em conformidade com o comportamento de broadcast em uma variável de condição.
+
+```c
+void condvar_broadcast(struct condvar *c) {
+    while (c->waiting_threads > 0) {
+        sem_post(&c->semaphore);
+    }
+}
+```
+
 ## Teste
 
-## Conclusões
+## Reflexões
+
