@@ -23,15 +23,15 @@ void *produtor(void *arg)
 	for (;;) {
 		int v = rand();
 		if (v % 10 == 0 && v != 0) {
-            sem_wait(&mutex);       // lock
+            sem_wait(&mutex);
 			while (((inserir + 1) % TAMANHO) == remover) {
-                sem_post(&mutex);   // unlock
-                sem_wait(&mutex);   // lock
+                sem_post(&mutex);
+                sem_wait(&mutex);
 			}
 			printf("Produzindo %d\n", v);
 			dados[inserir] = v;
 			inserir = (inserir + 1) % TAMANHO;
-			sem_post(&mutex);       // unlock
+			sem_post(&mutex);
 			condvar_signal(&cond);
 		}
 		usleep(50000);
@@ -43,13 +43,13 @@ void *produtor(void *arg)
 void *consumidor(void *arg)
 {
 	for (;;) {
-		sem_wait(&mutex);   // lock
+		sem_wait(&mutex);
 		while (inserir == remover) {
 			condvar_wait(&cond, &mutex);
 		}
 		printf("%zu: Consumindo %d\n", (size_t)arg, dados[remover]);
 		remover = (remover + 1) % TAMANHO;
-		sem_post(&mutex);   // unlock
+		sem_post(&mutex);
 	}
 
 	return NULL;

@@ -91,9 +91,11 @@ void condvar_broadcast(struct condvar *c) {
     }
 }
 ```
-
-## Teste
-
 ## Reflexões
 
 
+## Teste
+
+Testei a API que implementei no problema dos produtores e consumidores, neste [link](./main.c). O produtor adiciona números aleatórios em um buffer circular de dez posições, e os consumidores removem elementos desse buffer. Utilizei um produtor e dois consumidores.
+
+Os resultados das iterações desse algoritmo pode ser visualizado neste [arquivo de log](./log.txt)
