@@ -74,11 +74,11 @@ A função que é usada para fazer uma thread esperar até que uma condição es
 
 ```c
 void condvar_wait(struct condvar *c, sem_t *mutex) {
-    c->waiting_threads++;
     sem_post(mutex);
+    c->waiting_threads++;
     sem_wait(&c->semaphore);
-    sem_wait(mutex);
     c->waiting_threads--;
+    sem_wait(mutex);
 }
 ```
 
@@ -91,11 +91,17 @@ void condvar_broadcast(struct condvar *c) {
     }
 }
 ```
-## Reflexões
-
 
 ## Teste
 
 Testei a API que implementei no problema dos produtores e consumidores, neste [link](./main.c). O produtor adiciona números aleatórios em um buffer circular de dez posições, e os consumidores removem elementos desse buffer. Utilizei um produtor e dois consumidores.
 
 Os resultados das iterações desse algoritmo pode ser visualizado neste [arquivo de log](./log.txt)
+
+## Reflexões
+
+Inicialmente, enfrentei desafios na implementação da função `condvar_wait`. Minha primeira versão não incluía a verificação do mutex, o que levou a um comportamento inesperado: as threads simplesmente paravam sua execução e o código não funcionava conforme o esperado.
+
+Uma melhoria que poderia ser considerada é a implementação de uma fila de threads a serem acordadas pelo `condvar_signal`. Isso permitiria um controle mais preciso sobre quais threads são notificadas quando um sinal é emitido. Atualmente, a função `condvar_signal` acorda apenas uma das threads em espera, mas não há garantia de qual thread será acordada.
+
+Verifiquei que o consumo de CPU durante o teste da API é baixo, o que é uma característica interessante do código. Isso indica que as threads estão realmente suspendendo sua execução quando necessário, evitando a utilização desnecessária de recursos do processador.

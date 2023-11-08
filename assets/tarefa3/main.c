@@ -61,6 +61,7 @@ int main()
 	pthread_t t1, t2;
 	cpu_set_t cpuset;
 
+	condvar_init(&cond);
     sem_init(&mutex,0,1);
 
 	err = pthread_create(&t1, NULL, produtor, (void*)0);

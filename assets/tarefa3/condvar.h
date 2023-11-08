@@ -14,11 +14,11 @@ void condvar_init(struct condvar *c) {
 }
 
 void condvar_wait(struct condvar *c, sem_t *mutex) {
-    c->waiting_threads++;
     sem_post(mutex);
+    c->waiting_threads++;
     sem_wait(&c->semaphore);
-    sem_wait(mutex);
     c->waiting_threads--;
+    sem_wait(mutex);
 }
 
 void condvar_signal(struct condvar *c) {
