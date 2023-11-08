@@ -17,7 +17,7 @@ void sem_inc(struct sem *s);
 void sem_dec(struct sem *s);
 ```
 
-Onde `sem_init` inicializa o semáforo com o valor `val`; `sem_inc` incrementa o valor do semáforo em uma unidade (valor_novo = valor + 1), também acordando alguma *thread* que tenha dormido esperando para decrementar o valor; e finalmente `sem_dec` decrementa o valor do semáforo em uma unidade (valor_novo = valor - 1) garantindo que o valor nunca fique negativo, para tanto ela pode ter que pôr a *thread* para dormir quando o valor do semáforo for zero até que haja um outro incremento.
+Onde `sem_init` inicializa o semáforo com o valor `val`; `sem_inc` incrementa o valor do semáforo em uma unidade ($valor_{novo} = valor + 1$), também acordando alguma *thread* que tenha dormido esperando para decrementar o valor; e finalmente `sem_dec` decrementa o valor do semáforo em uma unidade ($valor_{novo} = valor - 1$) garantindo que o valor nunca fique negativo, para tanto ela pode ter que pôr a *thread* para dormir quando o valor do semáforo for zero até que haja um outro incremento.
 
 Implemente, para esse ambiente, a API para variáveis de condição descrita no item *Variável de condição a partir de um mutex*. A diferença entre a questão aparesentada nesse item e esta é o ponto de partida: na primeira, a API de *mutex* está disponível, enquanto que aqui a API de semáforo está disponível
 
@@ -82,7 +82,7 @@ void condvar_wait(struct condvar *c, sem_t *mutex) {
 }
 ```
 
-A função que acorda todas as *threads* em espera pela condição ser satisfeita possui assinatura `condvar_broadcast(struct condvar* c)`. Ela verifica se há threads em espera (c->waiting_threads > 0) e, se houver, emite sinais para acordar todas elas em um loop com sem_post(&c->semaphore). Isso está em conformidade com o comportamento de broadcast em uma variável de condição.
+A função que acorda todas as *threads* em espera pela condição ser satisfeita possui assinatura `condvar_broadcast(struct condvar* c)`. Ela verifica se há threads em espera (`c->waiting_threads > 0`) e, se houver, emite sinais para acordar todas elas em um loop com sem_post(`&c->semaphore`). Isso está em conformidade com o comportamento de broadcast em uma variável de condição.
 
 ```c
 void condvar_broadcast(struct condvar *c) {
@@ -94,9 +94,9 @@ void condvar_broadcast(struct condvar *c) {
 
 ## Teste
 
-Testei a API que implementei no problema dos produtores e consumidores, neste [link](./main.c). O produtor adiciona números aleatórios em um buffer circular de dez posições, e os consumidores removem elementos desse buffer. Utilizei um produtor e dois consumidores.
+Testei a API que implementei no problema dos produtores e consumidores, neste [link](https://github.com/raphaelramosds/os/blob/main/assets/tarefa3/main.c). O produtor adiciona números aleatórios em um buffer circular de dez posições, e os consumidores removem elementos desse buffer. Utilizei um produtor e dois consumidores.
 
-Os resultados das iterações desse algoritmo pode ser visualizado neste [arquivo de log](./log.txt)
+Os resultados das iterações desse algoritmo pode ser visualizado neste [arquivo de log](https://github.com/raphaelramosds/os/blob/main/assets/tarefa3/log.txt)
 
 ## Reflexões
 
