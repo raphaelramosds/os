@@ -51,11 +51,11 @@ struct condvar {
 };
 ```
 
-A função de inicialização da variável de condição possui assinatura `condvar_init(struct condvar *c)`. Ela inicializa em zero o contador do semáforo da estrutura `condvar` e faz com que esse semáforo não seja compartilhado com outros processos. Além disso, essa função zera o número de *threads* em espera
+A função de inicialização da variável de condição possui assinatura `condvar_init(struct condvar *c)`. Ela inicializa em um o contador do semáforo da estrutura `condvar` e faz com que esse semáforo não seja compartilhado com outros processos. Além disso, essa função zera o número de *threads* em espera
 
 ```c
 void condvar_init(struct condvar *c) {
-    sem_init(&c->semaphore, 0, 0);
+    sem_init(&c->semaphore, 0, 1);
     c->waiting_threads = 0;
 }
 ```
